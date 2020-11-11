@@ -17,10 +17,24 @@ public class ProductRepository {
 		phone.setUnitPrice(1000);
 		phone.setCondition("New");
 		
-		for(int i=0;i<3;i++) {
-			listOfProducts.add(phone);
+		Product notebook = new Product("P0002","LG PC gram",1500000);
+		phone.setDescription("13.3inch, IPS LED display, 5rd Generation Intel Core processors");
+		phone.setCategory("NoteBook");
+		phone.setMenufacturer("LG");
+		phone.setUnitPrice(1000);
+		phone.setCondition("Refurbished");
+		
+		Product tablet = new Product("P0003","Galaxy Tab 5",900000);
+		phone.setDescription("212.9*125.6*6mm, Super AMOLED display, Octa-Core processor");
+		phone.setCategory("Tablet");
+		phone.setMenufacturer("Samsung");
+		phone.setUnitPrice(1000);
+		phone.setCondition("Old");
+		
+		listOfProducts.add(phone);
+		listOfProducts.add(notebook);
+		listOfProducts.add(tablet);
 
-		}
 	}
 	
 	public ArrayList<Product> getAllProducts(){
