@@ -7,27 +7,31 @@ import dto.Product;
 public class ProductRepository {
 	
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+	private static ProductRepository instance = new ProductRepository();
 	
+	public static ProductRepository getInstance() {
+		return instance;
+	}
 	public ProductRepository() {
 		
 		Product phone = new Product("P0001","iPhone12",1000000);
 		phone.setDescription("6.1inch, 2532X1170 Super Retina XDR display, µà¾ó 12MP Ä«¸Þ¶ó");
 		phone.setCategory("Smart Phone");
-		phone.setMenufacturer("Apple");
+		phone.setManufacturer("Apple");
 		phone.setUnitPrice(1000);
 		phone.setCondition("New");
 		
 		Product notebook = new Product("P0002","LG PC gram",1500000);
 		phone.setDescription("13.3inch, IPS LED display, 5rd Generation Intel Core processors");
 		phone.setCategory("NoteBook");
-		phone.setMenufacturer("LG");
+		phone.setManufacturer("LG");
 		phone.setUnitPrice(1000);
 		phone.setCondition("Refurbished");
 		
 		Product tablet = new Product("P0003","Galaxy Tab 5",900000);
 		phone.setDescription("212.9*125.6*6mm, Super AMOLED display, Octa-Core processor");
 		phone.setCategory("Tablet");
-		phone.setMenufacturer("Samsung");
+		phone.setManufacturer("Samsung");
 		phone.setUnitPrice(1000);
 		phone.setCondition("Old");
 		
@@ -51,5 +55,10 @@ public class ProductRepository {
 			}
 		}
 		return productById;
+	}
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
+		listOfProducts.add(product);
+		listOfProducts.add(product);
 	}
 }
