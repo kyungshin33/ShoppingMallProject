@@ -18,22 +18,28 @@ public class ProductRepository {
 		phone.setDescription("6.1inch, 2532X1170 Super Retina XDR display, µà¾ó 12MP Ä«¸Þ¶ó");
 		phone.setCategory("Smart Phone");
 		phone.setManufacturer("Apple");
-		phone.setUnitPrice(1000);
+		phone.setUnitPrice(1000000);
+		phone.setUnitsInStock(100);
 		phone.setCondition("New");
+		phone.setFilename("iphone12.jpg");
 		
 		Product notebook = new Product("P0002","LG PC gram",1500000);
-		phone.setDescription("13.3inch, IPS LED display, 5rd Generation Intel Core processors");
-		phone.setCategory("NoteBook");
-		phone.setManufacturer("LG");
-		phone.setUnitPrice(1000);
-		phone.setCondition("Refurbished");
+		notebook.setDescription("13.3inch, IPS LED display, 5rd Generation Intel Core processors");
+		notebook.setCategory("NoteBook");
+		notebook.setManufacturer("LG");
+		notebook.setUnitPrice(1500000);
+		notebook.setUnitsInStock(100);
+		notebook.setCondition("Refurbished");
+		notebook.setFilename("gram.jpg");
 		
 		Product tablet = new Product("P0003","Galaxy Tab 5",900000);
-		phone.setDescription("212.9*125.6*6mm, Super AMOLED display, Octa-Core processor");
-		phone.setCategory("Tablet");
-		phone.setManufacturer("Samsung");
-		phone.setUnitPrice(1000);
-		phone.setCondition("Old");
+		tablet.setDescription("212.9*125.6*6mm, Super AMOLED display, Octa-Core processor");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
+		tablet.setUnitPrice(900000);
+		tablet.setUnitsInStock(100);
+		tablet.setCondition("Old");
+		tablet.setFilename("tab5.jpg");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);

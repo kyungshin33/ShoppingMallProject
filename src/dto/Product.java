@@ -16,16 +16,24 @@ public class Product implements Serializable {
 	private String category;
 	private long unitsInStock;
 	private String condition;
+	private String filename;
 	
 	public Product() {
 		super();
 	}
-	
 	public Product(String productId, String pname, Integer unitPrice) {
 		this.productId = productId;
 		this.pname = pname;
 		this.unitPrice = unitPrice;
 	}
+	public String getProductId() {
+		return productId;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+
 	public String getPname() {
 		return pname;
 	}
@@ -82,11 +90,14 @@ public class Product implements Serializable {
 		this.condition = condition;
 	}
 
-	public String getProductId() {
-		return productId;
+	public String getFilename() {
+		return filename;
 	}
-	public void setProductId(String productId) {
-		this.productId = productId;
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
+	
+	
 	
 }

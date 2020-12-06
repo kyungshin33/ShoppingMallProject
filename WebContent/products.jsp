@@ -7,7 +7,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+crossorigin="anonymous">
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -27,6 +29,7 @@
 					Product product = listOfProducts.get(i);
 			%>
 				<div class="col-md-4">
+				<img src="./resources/images/<%=product.getFilename()%>" style="width: 100%">
 					<h3><%=product.getPname() %></h3>
 					<p><%=product.getDescription() %>
 					<p><%=product.getUnitPrice() %>원
