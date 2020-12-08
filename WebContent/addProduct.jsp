@@ -3,8 +3,9 @@
 <html>
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-crossorigin="anonymous">
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script type="text/javascript" src="/ShoppingMallProject/WebContent/resources/js/validation.js"></script>
 <title>상품 등록</title>
 </head>
 <body>
@@ -15,25 +16,25 @@ crossorigin="anonymous">
 		</div>
 	</div>
 	<div class="container">
-		<form name="newProduct" action="./processAddProduct.jsp" class="form-
+		<form name="newProduct" action="./resources/js/validation.js" class="form-
 		horizontal" method="post" enctype="multipart/form-data">
 			<div class = "form=group row">
 				<label class="col-sm-2">상품 코드</label>
 				<div class="col-sm-3">
-					<input type ="text" name="productId" class="form-
+					<input type ="text" id="productId" name="productId" class="form-
 					control">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">상품명</label>
 				<div class="col-sm-3">
-					<input type = "text" name="name" class="form-control">
+					<input type = "text" id="name" name="name" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
 			<label class="col-sm-2" >가격</label>
 			<div class="col-sm-3">
-				<input type="text" name="unitPrice" class="form-
+				<input type="text" id="unitPrice" name="unitPrice" class="form-
 				control">
 				</div>
 			</div>
@@ -61,7 +62,7 @@ crossorigin="anonymous">
 			<div class="form-group row">
 				<label class="col-sm-2">재고 수</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitsInstock" class="form-
+					<input type="text" id="unitInStock" name="unitsInstock" class="form-
 					control">
 				</div>
 			</div>
@@ -80,8 +81,9 @@ crossorigin="anonymous">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-offset-2 col-sm-10"></label>
-					<input type="submit" class="btn btn-primary" value="등록">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()">
+				</div>
 			</div>
 		</form>
 	</div>
